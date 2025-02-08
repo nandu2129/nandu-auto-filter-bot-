@@ -28,10 +28,10 @@ uvloop.install()
 class Bot(Client):
     def __init__(self):
         super().__init__(
-            name='Auto_Filter_Bot',
-            api_id=API_ID,
-            api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
+            name='Na_Movie_Search_Bot',
+            api_id=25210379,
+            api_hash=2f43e4bccc419e3b7e28e3219bb1d68c,
+            bot_token=8140111369:AAEUtglm21w9z59qWi_Kq1CduUn3FmsI6qc,
             plugins={"root": "plugins"}
         )
 
