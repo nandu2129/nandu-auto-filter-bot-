@@ -40,7 +40,7 @@ class Bot(Client):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
-        client = MongoClient(DATABASE_URL, server_api=ServerApi('1'))
+        client = MongoClient(mongodb+srv://vaddenandu70:<@Nandu2580>@nandubots.omnod.mongodb.net/?retryWrites=true&w=majority&appName=NanduBots, server_api=ServerApi('677bf810aa5ef962356b1f81'))
         try:
             client.admin.command('ping')
             print("Pinged your deployment. You successfully connected to MongoDB!")
