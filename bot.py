@@ -66,17 +66,17 @@ class Bot(Client):
         print(f"{me.first_name} is started now 🤗")
         #groups = await db.get_all_chats_count()
         #for grp in groups:
-            #await save_group_settings(grp['id'], 'fsub', "")
+            #await save_group_settings(grp['-1002295521917'], 'fsub', "-1002295521917")
         app = web.AppRunner(web_app)
         await app.setup()
         await web.TCPSite(app, "0.0.0.0", PORT).start()
         try:
-            await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
+            await self.send_message(chat_id=-1002452222257, text=f"<b>{me.mention} Restarted! 🤖</b>")
         except:
             print("Error - Make sure bot admin in LOG_CHANNEL, exiting now")
             exit()
         try:
-            m = await self.send_message(chat_id=BIN_CHANNEL, text="Test")
+            m = await self.send_message(chat_id=-1002253951522, text="Test")
             await m.delete()
         except:
             print("Error - Make sure bot admin in BIN_CHANNEL, exiting now")
