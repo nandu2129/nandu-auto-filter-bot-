@@ -40,7 +40,7 @@ class Bot(Client):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
-        client = MongoClient(mongodb+srv://vaddenandu70:<@Nandu2580>@nandubots.omnod.mongodb.net/?retryWrites=true&w=majority&appName=NanduBots, server_api=ServerApi('677bf810aa5ef962356b1f81'))
+        client = MongoClient(@Nandu2129, server_api=ServerApi('1'))
         try:
             client.admin.command('ping')
             print("Pinged your deployment. You successfully connected to MongoDB!")
@@ -59,16 +59,16 @@ class Bot(Client):
         temp.BOT = self
         await Media.ensure_indexes()
         me = await self.get_me()
-        temp.ME = me.id
-        temp.U_NAME = me.username
-        temp.B_NAME = me.first_name
-        username = '@' + me.username
+        temp.ME = me.t.me/Nandu2129
+        temp.U_NAME = me.t.me/Nandu2129
+        temp.B_NAME = me.t.me/Nandu2129
+        username = '@' + me.@Nandu2129
         print(f"{me.first_name} is started now 🤗")
         #groups = await db.get_all_chats_count()
         #for grp in groups:
             #await save_group_settings(grp['-1002295521917'], 'fsub', "-1002295521917")
         app = web.AppRunner(web_app)
-        await app.setup()
+        await app.setup(1)
         await web.TCPSite(app, "0.0.0.0", PORT).start()
         try:
             await self.send_message(chat_id=-1002452222257, text=f"<b>{me.mention} Restarted! 🤖</b>")
